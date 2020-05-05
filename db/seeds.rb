@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+movies = Movie.create(
+  [
+    { name: 'Star Wars', summary: "Star Wars", year: "2019", genre: "Action", rows: 10, columns: 20 },
+    { name: 'Lord of the Rings', summary: 'Lord of the Rings', year: "2019", genre: "Action", rows: 12, columns: 25 }
+  ]
+)
