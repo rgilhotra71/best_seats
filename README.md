@@ -9,9 +9,11 @@ Note: For making testing easy I have made it like: booking the seats found, when
 
 2.5.1
 
+
 * Configuration
 
 Run 'bundle install' in the app directory and follow the instructions untill successfully completed. Run 'rails c' to verify if setup is complete and successfull. 
+
 
 * Database creation
 1. Set your system credentials in 'database.yml' localy.
@@ -20,11 +22,14 @@ Run 'bundle install' in the app directory and follow the instructions untill suc
 
 3. Run 'rake db:seed' to add some movies to database.
 
+
 NOTE: If you are not able to setup the whole application and manage to run 'rails c', you can still test the functionality. What you can do is:
 
 1. Run 'service = SeatService.new(Movie.last, 2)' in rails console, where  Movie.last is the movie object and 2 is the number of seats requied.
 
 2. Then run 'service.best_seat'. It will return the best seats available for that movie e.g. ["a11", "a12"]
+
+
 
 * Developer information
 
