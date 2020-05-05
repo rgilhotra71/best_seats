@@ -1,5 +1,6 @@
 # README
-
+# best_seats
+App to find best available seat
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
