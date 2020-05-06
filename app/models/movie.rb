@@ -2,6 +2,9 @@ class Movie < ApplicationRecord
   # Associations
   has_many :seats, dependent: :destroy
 
+  # Valdations
+  validates :title, :summary, :year, :genre, :rows, :columns, presence: true
+
   # Callbacks
   after_create :create_seats
   ROWS = ("a".."z").to_a

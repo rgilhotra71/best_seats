@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   namespace :api do 
     namespace :v1 do 
-      resources :movies do
+      resources :movies, only: [:create, :index, :show ] do
       	get 'best_seat', on: :member
       end
     end

@@ -9,5 +9,7 @@ class CreateSeats < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+    add_index :seats, :number
+    add_index :seats, :status
   end
 end
