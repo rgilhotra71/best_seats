@@ -1,4 +1,5 @@
 class Api::V1::MoviesController < ApplicationController
+  rescue_from Exception, :with => :api_error
   before_action :set_movie, only: [:show, :best_seat]
 
   # GET /movies
@@ -42,5 +43,9 @@ class Api::V1::MoviesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def movie_params
       params.require(:movie).permit(:title, :summary, :year, :genre, :imdb_link, :rows, :columns)
+    end
+
+    def api_error(exception)
+      render json: {error: exception }
     end
 end

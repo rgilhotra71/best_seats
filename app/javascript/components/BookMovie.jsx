@@ -97,10 +97,10 @@ class BookMovie extends React.Component {
                 />
               </div>
               <div className="form-group" id="bestSeats">
-                Best seats available are: <label htmlFor="bestSeats">{best_seats}</label>
+                Booked seats are: <label htmlFor="bestSeats">{best_seats}</label>
               </div>
               <button type="submit" className="btn custom-button mt-3">
-                Get Best Seats
+                Book Seats
               </button>
               <Link to="/movies" className="btn btn-link mt-3">
                 Back to movies

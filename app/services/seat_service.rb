@@ -4,6 +4,8 @@ class SeatService
 	
 	def initialize(movie, seats)
 		@movie = movie
+    avl_seats = @movie.seats.available.select(:number).pluck(:number)
+    @available_seats = Hash[avl_seats.collect { |seat| [seat, ""] } ]
 		@req_seats = seats.to_i
 		@seat_found = false
 		@best_seats = []
@@ -42,7 +44,7 @@ class SeatService
 
   def check_availability(seat_options)
   	seat_options.each do |options|
-      seats = movie.seats.where(number: options, status: 0)
+      seats = options.select { |seat| @available_seats[seat] }
       if seats.size == req_seats
         @best_seats = options
   			@seat_found = true

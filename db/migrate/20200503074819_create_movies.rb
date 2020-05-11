@@ -1,4 +1,4 @@
-class CreateMovies < ActiveRecord::Migration[6.0]
+class CreateMovies < ActiveRecord::Migration[5.1]
   def change
     create_table :movies do |t|
       t.string :title
